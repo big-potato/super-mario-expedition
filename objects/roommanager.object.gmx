@@ -36,8 +36,39 @@ for(i=0;i&lt;room_width;i+=16)
     for(j=0;j&lt;room_height;j+=16)
         {
         above = tile_layer_find(1000000,i,j-16)
-        below = tile_layer_find(1000000,i,j)
-        if below != -1 and above != -1 and irandom(1) == 0 tile_set_region(below,tile_get_left(below),16,16,16)
+        left = tile_layer_find(1000000,i-16,j)
+        it = tile_layer_find(1000000,i,j)
+        right = tile_layer_find(1000000,i+16,j)
+        below = tile_layer_find(1000000,i,j+16)
+        if it != -1
+            {
+            if (above != -1 and irandom(1) == 0) or position_meeting(i,j-16,dirts)
+                {
+                tile_set_region(it,tile_get_left(it),16,16,16)
+                }
+            if above == -1 and !position_meeting(i,j-16,dirts)
+                {
+                if left == -1 and !position_meeting(i-16,j,dirts)
+                    {
+                    tile_set_region(it,floor(tile_get_left(it)/80)*80+16,tile_get_top(it),16,16)
+                    }
+                if right == -1 and !position_meeting(i+16,j,dirts)
+                    {
+                    tile_set_region(it,floor(tile_get_left(it)/80)*80+32,tile_get_top(it),16,16)
+                    }
+                }
+            if below == -1 and !position_meeting(i,j+16,dirts)
+                {
+                if left == -1 and !position_meeting(i-16,j,dirts)
+                    {
+                    tile_set_region(it,floor(tile_get_left(it)/80)*80+48,tile_get_top(it),16,16)
+                    }
+                if right == -1 and !position_meeting(i+16,j,dirts)
+                    {
+                    tile_set_region(it,floor(tile_get_left(it)/80)*80+64,tile_get_top(it),16,16)
+                    }
+                }
+            }
         }
     }
 </string>
