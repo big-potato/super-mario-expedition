@@ -8,9 +8,11 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>-1</persistent>
-  <colour>15124079</colour>
-  <showcolour>-1</showcolour>
-  <code>roommanager.music = towntheme
+  <colour>16749970</colour>
+  <showcolour>0</showcolour>
+  <code>roommanager.zone = "ow"
+
+roommanager.music = towntheme
 roommanager.menumusic = towntheme
 
 roommanager.roomsr[0,0] = room1
@@ -38,7 +40,7 @@ roommanager.roomsl[0,1] = 0</code>
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="owbg" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

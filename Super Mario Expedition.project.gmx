@@ -88,6 +88,8 @@
     <background>background\bgblocks</background>
     <background>background\farback</background>
     <background>background\scenery</background>
+    <background>background\owbg</background>
+    <background>background\ugbg</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

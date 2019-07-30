@@ -29,6 +29,7 @@
 roomsr = 0
 roomsu = 0
 roomsd = 0
+
 music = 0
 music2 = 0
 for(i=0;i&lt;room_width;i+=16)
@@ -104,6 +105,28 @@ for(i=0;i&lt;room_width;i+=16)
     }
 else audio_stop_sound(mario.music2)
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
