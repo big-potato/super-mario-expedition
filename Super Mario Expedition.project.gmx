@@ -65,22 +65,30 @@
       <sprites name="pipes">
         <sprite>sprites\spr_pipemasks</sprite>
         <sprite>sprites\spr_pipec</sprite>
+        <sprite>sprites\spr_pipecug</sprite>
         <sprite>sprites\spr_pipecfake</sprite>
         <sprite>sprites\spr_pipev</sprite>
-        <sprite>sprites\spr_pipehfake</sprite>
-        <sprite>sprites\spr_pipeh</sprite>
+        <sprite>sprites\spr_pipevug</sprite>
         <sprite>sprites\spr_pipevfake</sprite>
+        <sprite>sprites\spr_pipeh</sprite>
+        <sprite>sprites\spr_pipehug</sprite>
+        <sprite>sprites\spr_pipehfake</sprite>
       </sprites>
       <sprite>sprites\spr_end</sprite>
+      <sprite>sprites\spr_endug</sprite>
       <sprite>sprites\spr_block</sprite>
+      <sprite>sprites\spr_blockug</sprite>
       <sprite>sprites\spr_brick</sprite>
+      <sprite>sprites\spr_brickug</sprite>
       <sprite>sprites\spr_huh</sprite>
+      <sprite>sprites\spr_huhug</sprite>
       <sprite>sprites\spr_ground</sprite>
-      <sprite>sprites\spr_thru</sprite>
-      <sprite>sprites\spr_underground</sprite>
+      <sprite>sprites\spr_groundug</sprite>
       <sprite>sprites\spr_stairblock</sprite>
+      <sprite>sprites\spr_stairblockug</sprite>
       <sprite>sprites\spr_shroomplatform</sprite>
       <sprite>sprites\spr_cloud</sprite>
+      <sprite>sprites\spr_thru</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -128,9 +136,9 @@
         <object>objects\firehuh</object>
         <object>objects\coinhuh</object>
         <object>objects\superhuh</object>
+        <object>objects\brick</object>
         <object>objects\endblock</object>
         <object>objects\bumpblock</object>
-        <object>objects\brick</object>
         <object>objects\huhblock</object>
       </objects>
       <objects name="pipes">
@@ -139,11 +147,10 @@
         <object>objects\pipev</object>
         <object>objects\fakepipeh</object>
         <object>objects\fakepipev</object>
-        <object>objects\fakepipei</object>
+        <object>objects\fakepipec</object>
         <object>objects\pipe</object>
       </objects>
       <object>objects\dirt</object>
-      <object>objects\cavedirt</object>
       <object>objects\block</object>
       <object>objects\cloudplat</object>
       <object>objects\mushroom</object>
@@ -178,6 +185,7 @@
       <object>objects\smoke</object>
     </objects>
     <object>objects\collector</object>
+    <object>objects\shopkeeper</object>
     <object>objects\fireball</object>
     <object>objects\npc</object>
     <object>objects\projectile</object>
@@ -188,6 +196,7 @@
     <room>rooms\room3</room>
     <room>rooms\room5</room>
     <room>rooms\room6</room>
+    <room>rooms\room7</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

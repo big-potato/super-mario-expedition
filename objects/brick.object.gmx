@@ -28,6 +28,7 @@
             <string>vsp = -2.5-random(3)
 grav = 0.5
 hsp = random(4)-2
+if roommanager.zone == "ug" sprite_index = spr_blockug
 </string>
           </argument>
         </arguments>

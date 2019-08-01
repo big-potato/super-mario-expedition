@@ -124,7 +124,7 @@ if !variable_global_exists("coins") global.coins = 0
             <kind>1</kind>
             <string>if global.menu == 0
     {
-    if bbox_top &gt; room_height
+    if bbox_top &gt;= room_height
         {
         if is_array(roommanager.roomsd)
             {
@@ -142,7 +142,7 @@ if !variable_global_exists("coins") global.coins = 0
             }
         }
     
-    if bbox_bottom &lt; 0
+    if bbox_bottom &lt;= 0
         {
         if is_array(roommanager.roomsu)
             {
@@ -160,7 +160,7 @@ if !variable_global_exists("coins") global.coins = 0
             }
         }
     
-    if bbox_right &lt; 0
+    if bbox_right &lt;= 0
         {
         if is_array(roommanager.roomsl)
             {
@@ -178,7 +178,7 @@ if !variable_global_exists("coins") global.coins = 0
             }
         }
     
-    if bbox_left &gt; room_width
+    if bbox_left &gt;= room_width
         {
         if is_array(roommanager.roomsr)
             {
@@ -443,9 +443,9 @@ if global.menu == 0
     move_y(vsp)
     
     
-    if collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_top-0.1,bumpblock,true,true) and vsp &lt;= 0
+    if collision_rectangle(bbox_left+2,bbox_top,bbox_right-2,bbox_top-0.1,bumpblock,true,true) and vsp &lt;= 0
         {
-        with collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_top-0.1,bumpblock,true,true)
+        with collision_rectangle(bbox_left+2,bbox_top,bbox_right-2,bbox_top-0.1,bumpblock,true,true)
             {
             vsp = -3
             bumping = 1

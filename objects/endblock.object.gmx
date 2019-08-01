@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if roommanager.zone == "ug" sprite_index = spr_endug
+</string>
           </argument>
         </arguments>
       </action>

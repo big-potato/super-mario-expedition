@@ -30,6 +30,8 @@ roomsr = 0
 roomsu = 0
 roomsd = 0
 
+zone = ""
+
 music = 0
 music2 = 0
 for(i=0;i&lt;room_width;i+=16)

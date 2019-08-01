@@ -18,7 +18,7 @@ roommanager.menumusic = towntheme
 roommanager.roomsr[0,0] = room5
 roommanager.roomsr[0,1] = 0
 
-roommanager.roomsd[0,0] = room6
+roommanager.roomsd[0,0] = room7
 roommanager.roomsd[0,1] = 0</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -221,10 +221,6 @@ roommanager.roomsd[0,1] = 0</code>
     <instance objName="superbrick" x="256" y="96" name="inst_02E15D87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="144" y="240" name="inst_10C526BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="144" y="224" name="inst_418CEB37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="320" y="240" name="inst_41ED7E48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="320" y="256" name="inst_A3469C55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="320" y="272" name="inst_00A8F414" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="320" y="288" name="inst_770C3DD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="through" x="448" y="80" name="inst_374CC94B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="through" x="464" y="80" name="inst_731A73C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="through" x="480" y="80" name="inst_13FED0AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -236,6 +232,10 @@ roommanager.roomsd[0,1] = 0</code>
     <instance objName="through" x="32" y="112" name="inst_999FC27F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="32" y="96" name="inst_CE3E60DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="48" y="96" name="inst_0189340F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="320" y="240" name="inst_DE5BA734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="320" y="256" name="inst_6497B15C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="320" y="272" name="inst_6011B82F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="320" y="288" name="inst_CAB97D24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="farback" x="16" y="32" w="48" h="32" xo="0" yo="0" id="10003018" name="inst_711724B1" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

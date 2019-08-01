@@ -39,18 +39,20 @@
             if place_meeting(x+hsp*facing/16,y,block) 
                 {
                 instance_destroy()
+                audio_play_sound(sound,0,false)
                 break;
                 }
             x += hsp*facing/16
-            if place_meeting(x,y+vsp/16,block)
+            if place_meeting(x,y+vsp/16,surface)
                 {
                 if vsp &gt; 0 
                     {
                     vsp = -4
                     }
-                else
+                else if place_meeting(x,y+vsp/16,block)
                     {
                     instance_destroy()
+                    audio_play_sound(sound,0,false)
                     break;
                     }
                 }
