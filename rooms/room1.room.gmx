@@ -18,7 +18,7 @@ roommanager.menumusic = groundthememenu
 roommanager.roomsd[0,0] = room3
 roommanager.roomsd[0,1] = 800
 
-roommanager.roomsl[0,0] = room5
+roommanager.roomsl[0,0] = room6
 roommanager.roomsl[0,1] = 0</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -637,7 +637,7 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="stairblock" x="3296" y="32" name="inst_DFEB0FBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="3296" y="16" name="inst_2EF835C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="3296" y="0" name="inst_3333ED3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="-16" y="256" name="inst_517F8B0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="-16" y="240" name="inst_517F8B0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="240" name="inst_9A546FE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="224" name="inst_7BF8DA10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="208" name="inst_6FF04B27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -651,7 +651,7 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="stairblock" x="-48" y="80" name="inst_93317195" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="64" name="inst_BAAC9329" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="48" name="inst_516427D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="-32" y="256" name="inst_A2DF14B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="-32" y="240" name="inst_A2DF14B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="32" name="inst_FBBE45DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="16" name="inst_18401C37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="0" name="inst_309FC822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -666,6 +666,13 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="goomba" x="1976" y="240" name="inst_D0B0126E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="goomba" x="2688" y="240" name="inst_B47C64DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="goomba" x="2712" y="240" name="inst_B2FE925C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="dirt" x="0" y="240" name="inst_CA443831" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="992" y="288" name="inst_507D922F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="1040" y="288" name="inst_EA84E76A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="1264" y="288" name="inst_9F6C8B18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="1328" y="288" name="inst_E4B627E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="2384" y="288" name="inst_33A68627" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="2336" y="288" name="inst_16C3E0B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="farback" x="80" y="80" w="48" h="32" xo="0" yo="0" id="10002891" name="inst_DB6909AA" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

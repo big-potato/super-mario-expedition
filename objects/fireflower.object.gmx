@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-edible = 1
 throws = fireball
 still = true
 </string>

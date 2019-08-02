@@ -15,7 +15,7 @@
 roommanager.music = towntheme
 roommanager.menumusic = towntheme
 
-roommanager.roomsr[0,0] = room5
+roommanager.roomsr[0,0] = room1
 roommanager.roomsr[0,1] = 0
 
 roommanager.roomsd[0,0] = room7
@@ -134,9 +134,8 @@ roommanager.roomsd[0,1] = 0</code>
     <instance objName="dirt" x="400" y="272" name="inst_6ABE5144" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="384" y="272" name="inst_201CE318" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="368" y="272" name="inst_59D2EF61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="512" y="256" name="inst_B69AAC11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="528" y="256" name="inst_0516D366" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="544" y="256" name="inst_3C2A1180" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="512" y="240" name="inst_B69AAC11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="528" y="240" name="inst_0516D366" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="544" y="240" name="inst_6B620631" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="544" y="224" name="inst_9081F57E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="544" y="208" name="inst_E93EDBFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -236,6 +235,8 @@ roommanager.roomsd[0,1] = 0</code>
     <instance objName="pipev" x="320" y="256" name="inst_6497B15C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="320" y="272" name="inst_6011B82F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="320" y="288" name="inst_CAB97D24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="160" y="288" name="inst_B01B6CF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="208" y="288" name="inst_92DB1D89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="farback" x="16" y="32" w="48" h="32" xo="0" yo="0" id="10003018" name="inst_711724B1" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

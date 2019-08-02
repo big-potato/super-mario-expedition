@@ -304,6 +304,8 @@ roommanager.roomsu[0,1] = 0</code>
     <instance objName="stairblock" x="224" y="288" name="inst_7B7970FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="240" y="288" name="inst_1C4AB96A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="256" y="288" name="inst_70CADB0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="144" y="-16" name="inst_E0D486D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="224" y="-16" name="inst_9A43CDE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgblocks" x="32" y="112" w="16" h="16" xo="80" yo="0" id="10003261" name="inst_512DB514" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

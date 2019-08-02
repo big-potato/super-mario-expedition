@@ -49,8 +49,8 @@ b_menu = ord('C')
 
 xbutton = 0
 
-grav = hex(0,0,2,8,0) 
-agrav = hex(0,0,2,8,0) 
+grav = 0.5
+agrav = 0.175
 launchhsp = 0
 hsp = 0
 vsp = 0
@@ -59,17 +59,17 @@ hp = 1
 state = "walking"
 facing = 1
 
-walkmin = hex(0,0,1,3,0)
-walkacc = hex(0,0,0,9,8)
-runacc = hex(0,0,0,14,4)
-releasedec = hex(0,0,0,13,0)
-skiddec = hex(0,0,1,10,0)
-walkmax = hex(0,1,9,0,0)
-walkmaxland = hex(0,1,9,0,0)
-walkmaxwater = hex(0,1,1,0,0)
-runmax = hex(0,2,9,0,0)
-skidturn = hex(0,0,9,0,0)
-
+//walkmin = 0.07421875
+walkacc = 0.08
+runacc = 0.1
+releasedec = 0.15
+skiddec = 0.2
+walkmax = 1.5
+walkmaxland = 1.5
+walkmaxwater = 1
+runmax = 2.5
+skidturn = 0.4
+//jumpp = 5
 
 
 hat = noone//hat_regular
@@ -77,6 +77,52 @@ shirt = noone//shirt_regular
 pants = noone//pants_regular
 
 if !variable_global_exists("coins") global.coins = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Jump on landing
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Coyote
 </string>
           </argument>
         </arguments>
@@ -99,7 +145,8 @@ if !variable_global_exists("coins") global.coins = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//NOTHING HAPPENS HERE! SURPRISE!
+            <string>///Hit Invinciblity
+//NOTHING HAPPENS HERE! SURPRISE!
 </string>
           </argument>
         </arguments>
@@ -131,7 +178,7 @@ if !variable_global_exists("coins") global.coins = 0
             gotoroomx = 0.1
             for(i=0;i&lt;array_height_2d(roommanager.roomsd);i++)
                 {
-                if (roommanager.roomsd[i,1] &gt; gotoroomx or gotoroomx == 0.1) and roommanager.roomsd[i,1] &lt;= x
+                if (roommanager.roomsd[i,1] &gt; gotoroomx and roommanager.roomsd[i,1] &lt;= x) or gotoroomx == 0.1
                     {
                     gotoroom = roommanager.roomsd[i,0]
                     gotoroomx = roommanager.roomsd[i,1]
@@ -149,7 +196,7 @@ if !variable_global_exists("coins") global.coins = 0
             gotoroomx = 0.1
             for(i=0;i&lt;array_height_2d(roommanager.roomsu);i++)
                 {
-                if (roommanager.roomsu[i,1] &gt; gotoroomx or gotoroomx == 0.1) and roommanager.roomsu[i,1] &lt;= x
+                if (roommanager.roomsu[i,1] &gt; gotoroomx and roommanager.roomsu[i,1] &lt;= x) or gotoroomx == 0.1 
                     {
                     gotoroom = roommanager.roomsu[i,0]
                     gotoroomx = roommanager.roomsu[i,1]
@@ -167,7 +214,7 @@ if !variable_global_exists("coins") global.coins = 0
             gotoroomy = 0.1
             for(i=0;i&lt;array_height_2d(roommanager.roomsl);i++)
                 {
-                if (roommanager.roomsl[i,1] &gt; gotoroomy or gotoroomy == 0.1) and roommanager.roomsl[i,1] &lt;= y
+                if (roommanager.roomsl[i,1] &gt; gotoroomy and roommanager.roomsl[i,1] &lt;= y) or gotoroomy == 0.1
                     {
                     gotoroom = roommanager.roomsl[i,0]
                     gotoroomy = roommanager.roomsl[i,1]
@@ -185,7 +232,7 @@ if !variable_global_exists("coins") global.coins = 0
             gotoroomy = 0.1
             for(i=0;i&lt;array_height_2d(roommanager.roomsr);i++)
                 {
-                if (roommanager.roomsr[i,1] &gt; gotoroomy or gotoroomy == 0.1) and roommanager.roomsr[i,1] &lt;= y
+                if (roommanager.roomsr[i,1] &gt; gotoroomy and roommanager.roomsr[i,1] &lt;= y) or gotoroomy == 0.1
                     {
                     gotoroom = roommanager.roomsr[i,0]
                     gotoroomy = roommanager.roomsr[i,1]
@@ -275,6 +322,8 @@ if !variable_global_exists("coins") global.coins = 0
 if alarm[0] &gt; 0 and hp &gt; 0 image_alpha = random(1)
 else image_alpha = 1
 
+//if keyboard_check_pressed(vk_space) jumpp += 0.05
+
 inputs()
 vsp2=vsp
 depth = -1
@@ -299,32 +348,20 @@ if global.menu == 0
     if swimming walkmax = walkmaxwater
     if !collision_rectangle(bbox_left,bbox_bottom+1,bbox_right,bbox_bottom+11/10,surface,false,false) and !place_meeting(x,y,pipe) state = "jumping"
     
-    if jumppress &amp;&amp; (state != "jumping" or swimming == 1) &amp;&amp; state != "piping"
+    if jumppress alarm[2] = 3
+    if alarm[2] &gt; 0 &amp;&amp; (state != "jumping" or swimming == 1 or alarm[1] &gt; 0) &amp;&amp; state != "piping"
         {
+        alarm[2] = 0
         audio_play_sound(sfx_jump,0,0)
         state = "jumping"
         launchhsp = abs(hsp)
-        vsp = -4
-        grav = hex(0,0,6,0,0)
-        agrav = hex(0,0,1,14,0)
-        if launchhsp &gt;= hex(0,2,5,0,0) 
-            {
-            vsp = -5
-            grav = hex(0,0,9,0,0)
-            agrav = hex(0,0,2,8,0) 
-            }
-            
-        if launchhsp &lt; 1
-            {
-            vsp = -4
-            grav = hex(0,0,7,0,0)
-            agrav = hex(0,0,2,0,0)
-            }
+        vsp = -5-launchhsp/5
+        grav = 0.5
+        agrav = 0.175
         if swimming
             {
             vsp = -1.5
             }
-        vsp -= agrav
         }
         
     
@@ -333,29 +370,8 @@ if global.menu == 0
         
     if state == "jumping"
         {
-        hsp2 = hsp
-        if xbutton == facing
-            {
-            if hsp &lt; hex(0,1,9,0,0) hsp += hex(0,0,0,9,8)
-            else hsp += hex(0,0,0,14,4)
-            }
-        if xbutton == -facing
-            {
-            if hsp &gt;= hex(0,1,9,0,0) hsp -= hex(0,0,0,14,4)
-            else 
-                {
-                if launchhsp &lt; hex(0,1,13,0,0) hsp -= hex(0,0,0,9,8)
-                else hsp -= hex(0,0,0,13,0)
-                }
-            }
-        if launchhsp &lt; hex(0,1,9,0,0)
-            {
-            if hsp &gt; hex(0,1,9,0,0) hsp = hsp2-hsp2%1
-            }
-        else
-            {
-            if hsp &gt; hex(0,2,9,0,0) hsp = hsp2-hsp2%1
-            }
+        if abs(hsp) &lt; walkmax hsp += walkacc*xbutton*facing
+        
         if !swimming
             {
             if jump and vsp &lt; 0 vsp += agrav
@@ -368,10 +384,13 @@ if global.menu == 0
             }
         if !jumppress &amp;&amp; (collision_rectangle(bbox_left,bbox_bottom+1,bbox_right,bbox_bottom+11/10,surface,false,false)) &amp;&amp; vsp &gt;= 0
             {
+            instance_create(random_range(bbox_left,bbox_right),bbox_bottom,smoke)
+            instance_create(random_range(bbox_left,bbox_right),bbox_bottom,smoke)
             state = "walking"
             if run state = "running"
             }
         }
+    else alarm[1] = 4
         
     if state == "walking"
         {
@@ -382,7 +401,7 @@ if global.menu == 0
             if xbutton == facing hsp += walkacc
             if xbutton == -facing state = "skidding"
             if hsp &lt; 0 hsp = 0 
-            if hsp &gt; walkmax hsp = drop_subsub(hsp2)
+            if hsp &gt; walkmax hsp = walkmax
             }
         else state = "running"
         }
@@ -626,7 +645,7 @@ if pants != noone draw_sprite_ext(pants,image_index,round(x-(facing-1)*8),round(
 if hat != noone draw_sprite_ext(hat,image_index,round(x-(facing-1)*8),round(y),facing,1,0,c_white,image_alpha)
 
 
-//draw_text(x-16,y-24,"hp: " + string(hp))
+//draw_text(x-16,y-24,"jump: " + string(jumpp))
 //draw_text(x-16,y-8,"coins: " + string(global.coins))
 
 

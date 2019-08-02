@@ -108,8 +108,8 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="dirt" x="0" y="272" name="inst_7FB305B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="0" y="256" name="inst_45C82C1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="roommanager" x="32" y="64" name="inst_0A59C229" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="-16" y="256" name="inst_9A546FE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="-32" y="256" name="inst_7BF8DA10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="-16" y="240" name="inst_9A546FE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="stairblock" x="-32" y="240" name="inst_7BF8DA10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="240" name="inst_6FF04B27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="192" name="inst_EDD69AEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="176" name="inst_18AC892B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -161,7 +161,6 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="stairblock" x="544" y="32" name="inst_20F4EFDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="544" y="16" name="inst_A449E55A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="544" y="0" name="inst_9BCD7F3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="stairblock" x="-48" y="256" name="inst_2159A9A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="224" name="inst_FC26CD48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="-48" y="208" name="inst_AB25C9E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="160" y="192" name="inst_5A93D30A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-edible = 1
 still = true
 </string>
           </argument>

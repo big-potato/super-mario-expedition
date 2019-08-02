@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>if !global.menu
     {
+    image_speed = 1
     if move == "bounce"
         {
         if !variable_instance_exists(id,"vsp") vsp = -2
@@ -102,6 +103,7 @@
             }
         }
     }
+else image_speed = 0
 </string>
           </argument>
         </arguments>
