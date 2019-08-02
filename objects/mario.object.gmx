@@ -59,16 +59,19 @@ hp = 1
 state = "walking"
 facing = 1
 
-//walkmin = 0.07421875
+
 walkacc = 0.08
-runacc = 0.1
-releasedec = 0.15
-skiddec = 0.2
 walkmax = 1.5
 walkmaxland = 1.5
 walkmaxwater = 1
-runmax = 2.5
+releasedec = 0.1
+skiddec = 0.15
+runacc = 0.02
+runmax = 3.5
 skidturn = 0.4
+jumpacc = 0.03
+jumpdec = 0.1
+jumpmax = 3
 //jumpp = 5
 
 
@@ -370,16 +373,17 @@ if global.menu == 0
         
     if state == "jumping"
         {
-        if abs(hsp) &lt; walkmax hsp += walkacc*xbutton*facing
+        if abs(hsp) &lt; jumpmax hsp += jumpacc*xbutton*facing
+        if xbutton == 0 hsp -= jumpdec*sign(hsp)
         
         if !swimming
             {
-            if jump and vsp &lt; 0 vsp += agrav
+            if jump vsp += agrav
             else vsp += grav
             }
         else 
             {
-            if jump and vsp &lt; 0 vsp += 13/256
+            if jump vsp += 13/256
             else vsp += 5/128
             }
         if !jumppress &amp;&amp; (collision_rectangle(bbox_left,bbox_bottom+1,bbox_right,bbox_bottom+11/10,surface,false,false)) &amp;&amp; vsp &gt;= 0
@@ -398,10 +402,10 @@ if global.menu == 0
             {
             if xbutton == 0 hsp -= releasedec
             hsp2 = hsp
-            if xbutton == facing hsp += walkacc
+            if xbutton == facing and hsp &lt; walkmax hsp += walkacc
             if xbutton == -facing state = "skidding"
             if hsp &lt; 0 hsp = 0 
-            if hsp &gt; walkmax hsp = walkmax
+            if hsp &gt; walkmax hsp -= releasedec
             }
         else state = "running"
         }
@@ -415,15 +419,19 @@ if global.menu == 0
         if run or timer &gt; 0
             {
             hsp2 = hsp
-            if xbutton == facing hsp += runacc
+            if xbutton == facing 
+                {
+                if hsp &gt; walkmax hsp += runacc
+                else hsp += walkacc                
+                }
             if xbutton == 0 hsp -= releasedec
             if hsp &lt; 0 hsp = 0
-            if hsp &gt; runmax hsp = drop_subsub(hsp2)
+            if hsp &gt; runmax hsp = runmax
             }
         if timer &lt;= 0
             {
             state = "walking"
-            if hsp &gt; walkmax hsp = walkmax
+            //if hsp &gt; walkmax hsp = walkmax
             }
         }
     else timer = 0
@@ -466,7 +474,7 @@ if global.menu == 0
         {
         with collision_rectangle(bbox_left+2,bbox_top,bbox_right-2,bbox_top-0.1,bumpblock,true,true)
             {
-            vsp = -3
+            vsp = -4
             bumping = 1
             }
         vsp = 0.1

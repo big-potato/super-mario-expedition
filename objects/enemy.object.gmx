@@ -88,95 +88,102 @@ if global.menu == 0
     {
     image_speed = frames
     //tactics ---------------------------------------------
-    if variable_instance_exists(id,"walks") and place_meeting(x,y+1,block)
+    //if variable_instance_exists(id,"walks") and place_meeting(x,y+1,block)
         {
-        if state == "patrol"
+        //if state == "patrol"
             {
-            if variable_instance_exists(id,"edges")
+            //if variable_instance_exists(id,"edges")
                 {
-                if !place_meeting(x+hsp*facing*8,y+1,block)
+                //if !place_meeting(x+hsp*facing*8,y+1,block)
                     {
-                    facing *= -1
+                    //facing *= -1
                     }
                 }
-            if irandom(600) == 0
+            //if irandom(600) == 0
                 {
-                facing *= -1
+                //facing *= -1
                 }
-            if abs(x-mario.x) &lt; 64 and variable_instance_exists(id,"combats") state = "combat"
+            //if abs(x-mario.x) &lt; 64 and variable_instance_exists(id,"combats") state = "combat"
             }
         
-        else if state == "guard"
+        //else if state == "guard"
             {
-            if variable_instance_exists(id,"edges")
+            //if variable_instance_exists(id,"edges")
                 {
-                if !place_meeting(x+hsp*facing*8,y+1,block)
+                //if !place_meeting(x+hsp*facing*8,y+1,block)
                     {
-                    facing *= -1
+                    //facing *= -1
                     }
                 }
-            if irandom(40) == 0
+            //if irandom(40) == 0
                 {
-                facing *= -1
+                //facing *= -1
                 }
-            if abs(x-mario.x) &lt; 64 and variable_instance_exists(id,"combats") state = "combat"
-            if statetime == 0 and variable_instance_exists(id,"patrols") state = "patrol"
+            //if abs(x-mario.x) &lt; 64 and variable_instance_exists(id,"combats") state = "combat"
+            //if statetime == 0 and variable_instance_exists(id,"patrols") state = "patrol"
             }
         
-        else if state == "combat"
+        //else if state == "combat"
             {
-            if variable_instance_exists(id,"edges")
+            //if variable_instance_exists(id,"edges")
                 {
-                if !place_meeting(x+hsp*facing*8,y+1,block) and mario.y &lt;= y
+                //if !place_meeting(x+hsp*facing*8,y+1,block) and mario.y &lt;= y
                     {
-                    facing *= -1
-                    facinglock = 1
-                    locktime = 30
+                    //facing *= -1
+                    //facinglock = 1
+                    //locktime = 30
                     }
                 }
             //avoid stomps
-            if variable_instance_exists(id,'stomped')
+            //if variable_instance_exists(id,'stomped')
                 {
                 //down and towards
-                if mario.vsp &gt; 0 &amp;&amp; sign(x-mario.x) == mario.facing &amp;&amp; y &gt; mario.y and !facinglock
+                //if mario.vsp &gt; 0 &amp;&amp; sign(x-mario.x) == mario.facing &amp;&amp; y &gt; mario.y and !facinglock
                     {
-                    facing = mario.facing
+                    //facing = mario.facing
                     }
-                else if !facinglock and !collision_line((bbox_left+bbox_right)/2,(bbox_top+bbox_bottom)/2,(mario.bbox_left+mario.bbox_right)/2,(mario.bbox_top+mario.bbox_bottom)/2,block,false,false)
+                //else if !facinglock and !collision_line((bbox_left+bbox_right)/2,(bbox_top+bbox_bottom)/2,(mario.bbox_left+mario.bbox_right)/2,(mario.bbox_top+mario.bbox_bottom)/2,block,false,false)
                     {
-                    facing = sign(mario.x-x)
+                    //facing = sign(mario.x-x)
                     }
                 }
-            else
+            //else
                 {
-                if !facinglock and !collision_line((bbox_left+bbox_right)/2,(bbox_top+bbox_bottom)/2,(mario.bbox_left+mario.bbox_right)/2,(mario.bbox_top+mario.bbox_bottom)/2,block,false,false)
+                //if !facinglock and !collision_line((bbox_left+bbox_right)/2,(bbox_top+bbox_bottom)/2,(mario.bbox_left+mario.bbox_right)/2,(mario.bbox_top+mario.bbox_bottom)/2,block,false,false)
                     {
-                    facing = sign(mario.x-x)
+                    //facing = sign(mario.x-x)
                     }
                 }
             
-            if abs(x-mario.x) &gt; 96 
+            //if abs(x-mario.x) &gt; 96 
                 {
-                state = "guard"
-                statetime = 1200
+                //state = "guard"
+                //statetime = 1200
                 }
             }
         
         
-        if facing != prevfacing hsp *= -1
+        //if facing != prevfacing hsp *= -1
         }
     
     
     //moves -----------------------------------------
     if variable_instance_exists(id,"walks")
         {
+        if variable_instance_exists(id,"edges")
+            {
+            if !place_meeting(x+hsp*facing*8,y+1,block)
+                {
+                facing *= -1
+                }
+            }
         if hsp == 0
             {
             facing *= -1
-            facinglock = 1
-            locktime = 30
+            //facinglock = 1
+            //locktime = 30
             }
-        if locktime &lt;= 0 facinglock = 0
+        //if locktime &lt;= 0 facinglock = 0
         if hsp &lt; maxspd and place_meeting(x,y+1,block) hsp += 0.25
         if hsp == 0 hsp = 0.25
         }

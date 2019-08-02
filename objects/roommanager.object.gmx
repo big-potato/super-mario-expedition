@@ -45,7 +45,7 @@ for(i=0;i&lt;room_width;i+=16)
         below = tile_layer_find(1000000,i,j+16)
         if it != -1
             {
-            if (above != -1 and irandom(1) == 0) or position_meeting(i,j-16,dirts)
+            if (above != -1 and irandom(1) == 0) or position_meeting(i,j-16,block)
                 {
                 tile_set_region(it,tile_get_left(it),16,16,16)
                 }
