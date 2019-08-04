@@ -261,12 +261,6 @@ roommanager.roomsu[0,1] = 0</code>
     <instance objName="stairblock" x="272" y="272" name="inst_757C38D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="128" y="240" name="inst_988FE9B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="144" y="240" name="inst_72C3ACFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="160" y="240" name="inst_6B3ADF29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="160" y="224" name="inst_8F23B808" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="160" y="208" name="inst_A6DBA723" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="160" y="192" name="inst_FE004EB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="192" y="240" name="inst_09551668" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="fakepipev" x="192" y="224" name="inst_42A1EE6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="320" y="64" name="inst_C75B64B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="320" y="48" name="inst_96BF084C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="320" y="32" name="inst_C79F28FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -306,6 +300,14 @@ roommanager.roomsu[0,1] = 0</code>
     <instance objName="stairblock" x="256" y="288" name="inst_70CADB0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="144" y="-16" name="inst_E0D486D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="224" y="-16" name="inst_9A43CDE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="160" y="192" name="inst_F7D3B308" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="160" y="208" name="inst_3986956E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="160" y="224" name="inst_F1DB46FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="160" y="240" name="inst_E383CAC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="192" y="224" name="inst_7C522D3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="192" y="240" name="inst_FA8D2D40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipec" x="160" y="256" name="inst_1BB12457" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipec" x="192" y="256" name="inst_E197FBF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgblocks" x="32" y="112" w="16" h="16" xo="80" yo="0" id="10003261" name="inst_512DB514" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
