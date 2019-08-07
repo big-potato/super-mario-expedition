@@ -67,6 +67,7 @@ global.font = font_add_sprite(spr_font,30,true,1)
 instance_deactivate_object(blaster)
 instance_activate_region(view_xview[0]-64,view_yview[0]-64,view_wview[0]+128,view_hview[0]+128,true)
 instance_activate_object(bill)
+instance_activate_object(lakitu)
 
 if mario.hp &gt; 0 and !global.menu
     {

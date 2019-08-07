@@ -67,8 +67,11 @@ release = false
             <string>animpause()
 if !global.menu
     {
-    duration -= 1/room_speed
-    if duration == 0 instance_destroy()
+    if duration != false
+        {
+        duration -= 1/room_speed
+        if duration &lt;= 0 instance_destroy()
+        }
     
     if place_meeting(x,y,block) and !wallthrough instance_destroy()
     fall()
