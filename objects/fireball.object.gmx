@@ -25,12 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_number(fireball) &gt; 3 instance_destroy()
-move = "bounce"
-type = "fire"
-team = 0
+            <string>event_inherited()
+hsp = 4
+vsp = -2
 sound = sfx_fire
 audio_play_sound(sound,0,false)
+
+jspd = 4
+falls = true
+jumpy = true
+fire = true
+destructible = true
+
 </string>
           </argument>
         </arguments>

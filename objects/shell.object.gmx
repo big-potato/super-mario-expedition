@@ -26,12 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-bounce=1
-stomped=shellmove
-still = true
 hsp = 0
-throwstomp = true
+
+stomped = shellmove
+bounce = 4
 directional = true
+thrown = shellmove
 </string>
           </argument>
         </arguments>

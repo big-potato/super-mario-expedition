@@ -27,22 +27,13 @@
             <kind>1</kind>
             <string>event_inherited()
 
-maxspd = 0.75
+hspd = 0.75
+hsp = hspd
 image_speed = 0.125
 
-burned = roastedgoomba
-burns = true
+
 stomped = goombacorpse
-bounce = true
-hurts = true
-
-walks = 1
-falls = 1
-
-//patrols = 1
-//combats = 1
-
-//state = "patrol"
+burned = roastedgoomba
 </string>
           </argument>
         </arguments>

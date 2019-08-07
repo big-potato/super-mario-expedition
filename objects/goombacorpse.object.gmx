@@ -29,8 +29,7 @@
 
 hsp = 0
 burned = roastedgoomba
-burns = true
-still = true
+projectiledestroy = false
 </string>
           </argument>
         </arguments>

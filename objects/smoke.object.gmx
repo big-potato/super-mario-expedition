@@ -48,9 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_index == 3 instance_destroy()
+            <string>animpause()
+if image_index == 3 instance_destroy()
 image_speed = 0.125
-if global.menu image_speed = 0
 </string>
           </argument>
         </arguments>

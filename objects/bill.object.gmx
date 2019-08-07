@@ -27,19 +27,17 @@
             <kind>1</kind>
             <string>event_inherited()
 
-maxspd = 2
+hspd = 2
+hsp = hspd
 image_speed = 0.125
-facing = sign(mario.x-x)
 
-burns = true
+falls = false
+wallthrough = true
+
 stomped = inertbill
-bounce = true
-hurts = true
-
-linear = true
-
-directional = true
+burned = false
 destroyatdistance = true
+
 
 if place_meeting(x+facing,y,inertbill) &amp;&amp; place_meeting(x+facing*14,y,inertbill)
     {

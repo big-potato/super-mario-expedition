@@ -25,13 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hsp = 1
-vsp = 0
-facing = mario.facing
-grav = hex(0,0,2,8,0)
-moves = "bump"
+            <string>event_inherited()
+hspd = 1
 edible = 1
-maxspd=1
 </string>
           </argument>
         </arguments>

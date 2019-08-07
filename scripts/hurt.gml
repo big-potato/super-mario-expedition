@@ -1,6 +1,8 @@
-if mario.alarm[0] <= 0
+if place_meeting(x,y,mario) and mario.state != "piping"
     {
-    audio_play_sound(sfx_hurt,0,false)
-    mario.hp --
-    mario.alarm[0] = 60
+    if getstomp
+        {
+        if hurttop ouch()
+        }
+    else if hurts ouch()
     }

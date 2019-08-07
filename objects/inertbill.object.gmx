@@ -28,10 +28,8 @@
             <string>event_inherited()
 
 hsp = 0
-burns = true
-still = true
 directional = true
-destroyatdistance = true
+
 </string>
           </argument>
         </arguments>

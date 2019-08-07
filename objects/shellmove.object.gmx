@@ -29,15 +29,14 @@
 hsp = 4
 vsp = 0 
 facing = mario.facing
-grav = hex(0,0,2,8,0)
-bounce=1
-stomped=shell
+
+hspd = hsp
+stomped = shell
+bounce = 4
 hurts = true
 undersides = true
-moves = "bump"
 bashes = true
-maxspd = 4
-nocollect = true
+collect = false
 directional = true
 
 </string>

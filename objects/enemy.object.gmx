@@ -25,36 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>locktime = 0
-statetime = 0
-facinglock = 0
-facing = choose(1,-1)
-grav = hex(0,0,2,8,0)
+            <string>facing = sign(mario.x+0.0001-x)
+grav = 0.2
 hsp = 0
 vsp = 0
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//home.guys --
+hspd = 0
+
+walks = true //Does this enemy move left and right?
+falls = true //Is this enemy affected by gravity?
+wallthrough = false //Can this enemy go through walls?
+edges = false //Does this enemy turn around at edges?
+
+stomped = nothing //What does this enemy become when stomped? False for unstompable.
+burned = nothing //What does this enemy become when burned? False for fireproof.
+landing = false //What does this enemy become when hitting the ground? False for no change.
+bounce = 4 //Does Mario bounce off this enemy?
+acc = 0.1
+turnto = false //Does this enemy turn around to face Mario?
+hurts = true //Does Mario take damage colliding with this enemy?
+hurttop = false //Does Mario take damage jumping on this enemy?
+projectiledestroy = true //Does this enemy destroy projectiles on contact?
+directional = true //Does the sprite flip with its facing?
+destroyatdistance = false //Is this enemy destroyed when far away?
+
+
 </string>
           </argument>
         </arguments>
@@ -77,181 +71,54 @@ vsp = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>prevfacing = facing
-if !variable_instance_exists(id,"frames") frames = image_speed
-image_speed = 0
+            <string>animpause()
+
+prevfacing = facing
 
 if !place_meeting(x,y,block) depth = -1
 if place_meeting(x,y,blaster) depth = 1
 
 if global.menu == 0
     {
-    image_speed = frames
-    //tactics ---------------------------------------------
-    //if variable_instance_exists(id,"walks") and place_meeting(x,y+1,block)
-        {
-        //if state == "patrol"
-            {
-            //if variable_instance_exists(id,"edges")
-                {
-                //if !place_meeting(x+hsp*facing*8,y+1,block)
-                    {
-                    //facing *= -1
-                    }
-                }
-            //if irandom(600) == 0
-                {
-                //facing *= -1
-                }
-            //if abs(x-mario.x) &lt; 64 and variable_instance_exists(id,"combats") state = "combat"
-            }
-        
-        //else if state == "guard"
-            {
-            //if variable_instance_exists(id,"edges")
-                {
-                //if !place_meeting(x+hsp*facing*8,y+1,block)
-                    {
-                    //facing *= -1
-                    }
-                }
-            //if irandom(40) == 0
-                {
-                //facing *= -1
-                }
-            //if abs(x-mario.x) &lt; 64 and variable_instance_exists(id,"combats") state = "combat"
-            //if statetime == 0 and variable_instance_exists(id,"patrols") state = "patrol"
-            }
-        
-        //else if state == "combat"
-            {
-            //if variable_instance_exists(id,"edges")
-                {
-                //if !place_meeting(x+hsp*facing*8,y+1,block) and mario.y &lt;= y
-                    {
-                    //facing *= -1
-                    //facinglock = 1
-                    //locktime = 30
-                    }
-                }
-            //avoid stomps
-            //if variable_instance_exists(id,'stomped')
-                {
-                //down and towards
-                //if mario.vsp &gt; 0 &amp;&amp; sign(x-mario.x) == mario.facing &amp;&amp; y &gt; mario.y and !facinglock
-                    {
-                    //facing = mario.facing
-                    }
-                //else if !facinglock and !collision_line((bbox_left+bbox_right)/2,(bbox_top+bbox_bottom)/2,(mario.bbox_left+mario.bbox_right)/2,(mario.bbox_top+mario.bbox_bottom)/2,block,false,false)
-                    {
-                    //facing = sign(mario.x-x)
-                    }
-                }
-            //else
-                {
-                //if !facinglock and !collision_line((bbox_left+bbox_right)/2,(bbox_top+bbox_bottom)/2,(mario.bbox_left+mario.bbox_right)/2,(mario.bbox_top+mario.bbox_bottom)/2,block,false,false)
-                    {
-                    //facing = sign(mario.x-x)
-                    }
-                }
-            
-            //if abs(x-mario.x) &gt; 96 
-                {
-                //state = "guard"
-                //statetime = 1200
-                }
-            }
-        
-        
-        //if facing != prevfacing hsp *= -1
-        }
-    
-    
     //moves -----------------------------------------
-    if variable_instance_exists(id,"walks")
+    edgeturn()
+    fall()
+    move()
+    if vsp = 0 and place_meeting(x,y+0.1,surface) and landing != false
         {
-        if variable_instance_exists(id,"edges")
-            {
-            if !place_meeting(x+hsp*facing*8,y+1,block)
-                {
-                facing *= -1
-                }
-            }
-        if hsp == 0
-            {
-            facing *= -1
-            //facinglock = 1
-            //locktime = 30
-            }
-        //if locktime &lt;= 0 facinglock = 0
-        if hsp &lt; maxspd and place_meeting(x,y+1,block) hsp += 0.25
-        if hsp == 0 hsp = 0.25
+        instance_destroy()
+        instance_create(x,y,landing)
         }
-    if variable_instance_exists(id,"falls")
+    if hsp == 0 and hspd != 0 and place_meeting(x+facing,y,block)
         {
-        vsp += grav
-        if vsp &gt; 4.5 vsp = 4
+        facing *= -1
+        hsp = hspd
         }
-    if variable_instance_exists(id,"linear")
+    if hsp &gt; hspd
         {
-        hsp = 0
-        vsp = 0
-        x += maxspd*facing
+        hsp -= acc
+        if hsp &lt; hspd hsp = hspd
         }
-    move_x(hsp)
-    move_y(vsp)
-    
-    
-    
-    
-    //interacts -----------------------------------------
-    if place_meeting(x,y,mario) and mario.state != "piping"
+    if hsp &lt; hspd
         {
-        if mario.vsp2 &gt; vsp and (bbox_top+bbox_bottom)/2 &gt;= mario.bbox_bottom
-            {
-            if variable_instance_exists(id,'bounce')
-                {
-                mario.vsp = -(mario.vsp % 1)-3.5
-                with mario
-                    {
-                    while place_meeting(x,y,other)
-                        {
-                        if place_meeting(x,y-0.1,block) break
-                        else y -= 0.1
-                        }
-                    }
-                }
-            if variable_instance_exists(id,"stomped")
-                {
-                instance_destroy()
-                with instance_create(x,y,stomped)
-                    {
-                    vsp = other.vsp
-                    hsp = other.hsp
-                    facing = other.facing
-                    }
-                }
-            if variable_instance_exists(id,'hurttop')
-                {
-                hurt()
-                }
-            }
-        else 
-            {
-            if variable_instance_exists(id,'hurts')
-                {
-                hurt()
-                }
-            }
+        hsp += acc
+        if hsp &gt; hspd hsp = hspd
         }
         
-    locktime --
-    statetime --
+    //interacts -----------------------------------------
+    if facing != sign(mario.x-x) and turnto
+        {
+        hsp *= -1
+        facing *= -1
+        }
+    
+    getstomp = stompcheck()
+    
+    hurt()
+    bouncing()
+    stomp()
     }
-if variable_instance_exists(id,'destroyatdistance')
-    {
-    if distance_to_object(mario) &gt; 1024 instance_destroy()
-    }
+distancedestroy()
 </string>
           </argument>
         </arguments>
@@ -274,7 +141,7 @@ if variable_instance_exists(id,'destroyatdistance')
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if variable_instance_exists(id,"directional") draw_sprite_ext(sprite_index,image_index,round(x-(facing-1)*(sprite_width-sprite_xoffset)/2),round(y),facing,1,0,c_white,1)
+            <string>if directional draw_sprite_ext(sprite_index,image_index,round(x-(facing-1)*(sprite_width-sprite_xoffset)/2),round(y),facing,1,0,c_white,1)
 else draw_self()
 </string>
           </argument>

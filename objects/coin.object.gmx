@@ -56,22 +56,27 @@ else image_speed = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_speed == 0
+            <string>animpause()
+
+if !global.menu
     {
-    if place_meeting(x,y,mario)
+    if image_speed == 0
         {
-        global.coins ++
-        audio_play_sound(sfx_coin,0,false)
-        instance_destroy()
+        if place_meeting(x,y,mario)
+            {
+            global.coins ++
+            audio_play_sound(sfx_coin,0,false)
+            instance_destroy()
+            }
         }
-    }
-else if !global.menu
-    {
-    y += vsp
-    x += hsp
-    vsp += 0.25
-    
-    if vsp &gt;= 4 instance_destroy()
+    if image_speed &gt; 0
+        {
+        y += vsp
+        x += hsp
+        vsp += 0.25
+        
+        if vsp &gt;= 4 instance_destroy()
+        }
     }
 </string>
           </argument>

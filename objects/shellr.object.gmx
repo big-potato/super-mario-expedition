@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-stomped=shellrmove
+stomped = shellrmove
+thrown = shellrmove
 </string>
           </argument>
         </arguments>

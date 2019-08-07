@@ -43,7 +43,9 @@
     <sprite>sprites\spr_goombacorpse</sprite>
     <sprite>sprites\spr_burntgoomba</sprite>
     <sprite>sprites\spr_fireball</sprite>
+    <sprite>sprites\spr_superball</sprite>
     <sprite>sprites\spr_fireflower</sprite>
+    <sprite>sprites\spr_superflower</sprite>
     <sprite>sprites\spr_supermushroom</sprite>
     <sprite>sprites\spr_coin</sprite>
     <sprite>sprites\spr_greenshell</sprite>
@@ -52,6 +54,9 @@
     <sprite>sprites\spr_redkoopa</sprite>
     <sprite>sprites\spr_buzzyshell</sprite>
     <sprite>sprites\spr_buzzybeetle</sprite>
+    <sprite>sprites\spr_spinyshell</sprite>
+    <sprite>sprites\spr_spiny</sprite>
+    <sprite>sprites\spr_lakitu</sprite>
     <sprite>sprites\spr_toad</sprite>
     <sprite>sprites\spr_blaster</sprite>
     <sprite>sprites\spr_bill</sprite>
@@ -106,7 +111,7 @@
     <script>scripts\dropitem.gml</script>
     <script>scripts\goitems.gml</script>
     <script>scripts\hex.gml</script>
-    <script>scripts\hurt.gml</script>
+    <script>scripts\ouch.gml</script>
     <script>scripts\inputs.gml</script>
     <script>scripts\invent_delete.gml</script>
     <script>scripts\move_x.gml</script>
@@ -115,14 +120,30 @@
     <script>scripts\piping.gml</script>
     <script>scripts\switchversion.gml</script>
     <script>scripts\underside.gml</script>
+    <script>scripts\animpause.gml</script>
+    <script>scripts\bump.gml</script>
+    <script>scripts\edgeturn.gml</script>
+    <script>scripts\fall.gml</script>
+    <script>scripts\stomp.gml</script>
+    <script>scripts\distancedestroy.gml</script>
+    <script>scripts\move.gml</script>
+    <script>scripts\hurt.gml</script>
+    <script>scripts\stompcheck.gml</script>
+    <script>scripts\bouncing.gml</script>
+    <script>scripts\walk.gml</script>
+    <script>scripts\bash.gml</script>
+    <script>scripts\undersiding.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\mario</object>
     <objects name="enemies">
       <object>objects\buzzy</object>
+      <object>objects\spiny</object>
+      <object>objects\spinyegg</object>
       <object>objects\goomba</object>
       <object>objects\koopa_r</object>
       <object>objects\koopa_g</object>
+      <object>objects\lakitu</object>
       <object>objects\bill</object>
       <object>objects\blaster</object>
       <object>objects\enemy</object>
@@ -162,18 +183,24 @@
     </objects>
     <objects name="items">
       <object>objects\fireflower</object>
-      <object>objects\shellmove</object>
+      <object>objects\superballflower</object>
       <object>objects\shell</object>
+      <object>objects\shellmove</object>
+      <object>objects\shellr</object>
+      <object>objects\shellrmove</object>
+      <object>objects\shellb</object>
       <object>objects\shellbmove</object>
       <object>objects\inertbill</object>
       <object>objects\supermushroom</object>
-      <object>objects\item</object>
       <object>objects\goombacorpse</object>
-      <object>objects\shellb</object>
       <object>objects\roastedgoomba</object>
-      <object>objects\shellrmove</object>
-      <object>objects\shellr</object>
       <object>objects\coin</object>
+      <object>objects\item</object>
+    </objects>
+    <objects name="projectiles">
+      <object>objects\fireball</object>
+      <object>objects\superball</object>
+      <object>objects\projectile</object>
     </objects>
     <objects name="management">
       <object>objects\camera</object>
@@ -186,9 +213,7 @@
     </objects>
     <object>objects\collector</object>
     <object>objects\shopkeeper</object>
-    <object>objects\fireball</object>
     <object>objects\npc</object>
-    <object>objects\projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>

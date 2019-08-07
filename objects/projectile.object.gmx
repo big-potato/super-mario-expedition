@@ -8,6 +8,45 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>grav = 0.2
+hsp = 4
+vsp = 0
+
+team = 0
+
+jspd = 0
+falls = false
+wallthrough = false
+jumpy = false
+wallbounce = false
+directional = true
+bashes = false
+fire = false
+destructible = false
+duration = false
+release = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,59 +64,87 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !global.menu
+            <string>animpause()
+if !global.menu
     {
-    image_speed = 1
-    if move == "bounce"
+    duration -= 1/room_speed
+    if duration == 0 instance_destroy()
+    
+    if place_meeting(x,y,block) and !wallthrough instance_destroy()
+    fall()
+    
+    if wallthrough
         {
-        if !variable_instance_exists(id,"vsp") vsp = -2
-        if !variable_instance_exists(id,"hsp") hsp = 4
-        if !variable_instance_exists(id,"grav") grav = 0.3
-        vsp += grav
-        if vsp &gt; hsp vsp = hsp
-        for(i=0;i&lt;16;i++)
+        x += hsp*facing
+        y += vsp
+        }
+    else for(i=0;i&lt;16;i++)
+        {
+        if place_meeting(x+hsp*facing/16,y,block) 
             {
-            if place_meeting(x+hsp*facing/16,y,block) 
+            if !wallbounce
                 {
                 instance_destroy()
+                if release != false instance_create(x,y,release)
                 audio_play_sound(sound,0,false)
                 break;
                 }
-            x += hsp*facing/16
-            if place_meeting(x,y+vsp/16,surface)
+            else facing *= -1
+            }
+        x += hsp*facing/16
+        if place_meeting(x,y+vsp/16,surface)
+            {
+            if vsp &gt; 0
                 {
-                if vsp &gt; 0 
-                    {
-                    vsp = -4
-                    }
-                else if place_meeting(x,y+vsp/16,block)
+                if jumpy vsp = -jspd
+                else
                     {
                     instance_destroy()
+                    if release != false instance_create(x,y,release)
                     audio_play_sound(sound,0,false)
                     break;
                     }
                 }
-            y += vsp/16
+            else if place_meeting(x,y+vsp/16,block)
+                {
+                if wallbounce vsp = -vsp
+                else
+                    {
+                    instance_destroy()
+                    if release != false instance_create(x,y,release)
+                    audio_play_sound(sound,0,false)
+                    break;
+                    }
+                }
             }
+        y += vsp/16
         }
     
-    
-    if type == "fire"
-        {
-        if team != -1
+    target = 0
+    if place_meeting(x,y,item) target = instance_place(x,y,item)
+    if team != -1 and place_meeting(x,y,enemy) target = instance_place(x,y,enemy)
+    if team != 1 and place_meeting(x,y,mario) target = instance_place(x,y,mario)
+    if target != 0
+        { 
+        if target.projectiledestroy and destructible instance_destroy()
+        if target.object_index == mario
             {
-            if place_meeting(x,y,all)
+            if fire
                 {
-                with instance_place(x,y,all) 
+                with mario burn()
+                }
+            else ouch()
+            }
+        else
+            {
+            with target
+                {
+                if other.fire
                     {
-                    if variable_instance_exists(id,"burns")
+                    if burned != false
                         {
-                        instance_destroy(other)
-                        }
-                    if variable_instance_exists(id,"burned")
-                        {
-                        if burned == nothing underside()
-                        else
+                        instance_destroy(other,true)
+                        if burned != nothing 
                             {
                             with instance_create(x,y,burned)
                                 {
@@ -87,23 +154,14 @@
                                 }
                             instance_destroy()
                             }
+                        underside()
                         }
                     }
-                }  
-            }
-        if team != 1
-            {
-            if place_meeting(x,y,mario)
-                {
-                with instance_place(x,y,mario)
-                    {
-                    burn()
-                    }
+                else if object_is_ancestor(object_index,enemy) underside()
                 }
-            }
+            }  
         }
     }
-else image_speed = 0
 </string>
           </argument>
         </arguments>
@@ -142,7 +200,8 @@ else image_speed = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,x,y,facing,1,0,c_white,1)
+            <string>if directional draw_sprite_ext(sprite_index,image_index,round(x-(facing-1)*(sprite_width-sprite_xoffset)/2),round(y),facing,1,0,c_white,1)
+else draw_self()
 </string>
           </argument>
         </arguments>
