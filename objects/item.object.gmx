@@ -34,6 +34,7 @@ carried = 0
 
 hspd = 0 //Resting horizontal speed
 jspd = 0 //Vertical speed when jumping
+acc = 0.1
 falls = true //Is this item affected by gravity?
 wallthrough = false //Can this item go through walls?
 edges = false //Does this item turn around at edges?
