@@ -28,7 +28,7 @@
             <string>bumping = 0
 vsp = 0
 drawy = y
-hits = 0
+hits = 1
 contents = nothing
 change = nothing
 </string>
@@ -59,7 +59,11 @@ change = nothing
         {
         if drawy == y
             {
-            if contents == coin instance_create(x,y,contents)
+            if contents == coin
+                {
+                instance_create(x,y,contents)
+                global.coins ++
+                }
             audio_play_sound(sound,0,0)
             }
         drawy += vsp
@@ -70,8 +74,8 @@ change = nothing
             drawy = y
             vsp = 0
             hits -= 1
-            if contents != coin instance_create(x,y,contents)
             if hits &lt;= 0 instance_change(change,true)
+            if contents != coin instance_create(x,y,contents)
             
             }
         if place_meeting(x,drawy,enemy)

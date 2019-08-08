@@ -149,19 +149,9 @@
       <object>objects\enemy</object>
     </objects>
     <objects name="blocks">
-      <objects name="bumpblocks">
-        <object>objects\coinbrick</object>
-        <object>objects\superbrick</object>
-        <object>objects\firebrick</object>
-        <object>objects\brickblock</object>
-        <object>objects\firehuh</object>
-        <object>objects\coinhuh</object>
-        <object>objects\superhuh</object>
-        <object>objects\brick</object>
-        <object>objects\endblock</object>
-        <object>objects\bumpblock</object>
-        <object>objects\huhblock</object>
-      </objects>
+      <object>objects\dirt</object>
+      <object>objects\huhblock</object>
+      <object>objects\brickblock</object>
       <objects name="pipes">
         <object>objects\pipeh</object>
         <object>objects\pipec</object>
@@ -171,15 +161,19 @@
         <object>objects\fakepipec</object>
         <object>objects\pipe</object>
       </objects>
-      <object>objects\dirt</object>
-      <object>objects\block</object>
       <object>objects\cloudplat</object>
       <object>objects\mushroom</object>
       <object>objects\stairblock</object>
       <object>objects\through</object>
       <object>objects\dirts</object>
+      <object>objects\block</object>
       <object>objects\surface</object>
       <object>objects\water</object>
+      <objects name="bumpblocks">
+        <object>objects\brick</object>
+        <object>objects\endblock</object>
+        <object>objects\bumpblock</object>
+      </objects>
     </objects>
     <objects name="items">
       <object>objects\fireflower</object>

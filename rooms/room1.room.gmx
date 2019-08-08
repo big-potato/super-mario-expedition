@@ -252,13 +252,9 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="dirt" x="160" y="256" name="inst_D27B8038" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="0" y="272" name="inst_7FB305B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="0" y="256" name="inst_45C82C1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="160" y="192" name="inst_43ED0B1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="224" y="192" name="inst_45BE6D04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="256" y="192" name="inst_86872965" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="288" y="192" name="inst_FCE0D542" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="superhuh" x="240" y="192" name="inst_F347DE0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="272" y="192" name="inst_8E2447F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="256" y="128" name="inst_61D1599D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="352" y="240" name="inst_EBD93323" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="352" y="224" name="inst_7925E59E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="512" y="240" name="inst_40D7E7CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -280,7 +276,6 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="pipev" x="816" y="288" name="inst_3D7AB891" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1136" y="192" name="inst_7AAC7828" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1168" y="192" name="inst_F200F242" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="superhuh" x="1152" y="192" name="inst_AD88078C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1184" y="128" name="inst_D65E0559" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1200" y="128" name="inst_8F64EE28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1232" y="128" name="inst_1455CDF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -292,8 +287,6 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="brickblock" x="1376" y="128" name="inst_21F0FBDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1360" y="128" name="inst_CDB17B3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1392" y="128" name="inst_B6DB35A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="1408" y="128" name="inst_086CF793" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinbrick" x="1408" y="192" name="inst_4110B419" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="goomba" x="1184" y="112" name="inst_A32222DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="goomba" x="1216" y="112" name="inst_A2924E50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="816" y="304" name="inst_75660736" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -301,10 +294,6 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="pipev" x="816" y="336" name="inst_CAF0A36F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1520" y="192" name="inst_E29589FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1504" y="192" name="inst_1456271E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="1600" y="192" name="inst_3625B7D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="1648" y="192" name="inst_9A67D096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="1696" y="192" name="inst_C97A86BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="superhuh" x="1648" y="128" name="inst_B61F716E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="1600" y="256" name="inst_E71B04C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="1616" y="256" name="inst_6A351687" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="1632" y="256" name="inst_D29817AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -459,8 +448,6 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="brickblock" x="2000" y="128" name="inst_7420D891" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1968" y="192" name="inst_056327B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="1984" y="192" name="inst_D659BB37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="1968" y="128" name="inst_77F08248" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="1984" y="128" name="inst_7CAABCA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="2096" y="240" name="inst_CFE20C72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="2096" y="224" name="inst_2B8F9A06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="2096" y="208" name="inst_5476A6E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -515,7 +502,6 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="brickblock" x="2608" y="192" name="inst_3217AB19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="2592" y="192" name="inst_22C5A90A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="2640" y="192" name="inst_CFB2B537" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="2624" y="192" name="inst_928679F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="2768" y="240" name="inst_127D4755" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="2768" y="224" name="inst_AC97082A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="2912" y="240" name="inst_8869D9EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -692,8 +678,25 @@ roommanager.roomsl[0,1] = 0</code>
     <instance objName="stairblock" x="2368" y="320" name="inst_8575A0B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="2384" y="320" name="inst_53728E2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="2384" y="304" name="inst_FE113676" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="superballflower" x="256" y="240" name="inst_7357F791" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="lakitu" x="272" y="32" name="inst_D28349EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="160" y="192" name="inst_AF2BFBA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="240" y="192" name="inst_A7B9C1D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="272" y="192" name="inst_AF78B19E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="256" y="128" name="inst_8B4E1D73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1152" y="192" name="inst_AE8735C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="supermushroom" x="1152" y="192" name="inst_85A9C259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1408" y="128" name="inst_28157B27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1600" y="192" name="inst_9E2AC306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1648" y="192" name="inst_009D9BAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1696" y="192" name="inst_FB59C71F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1648" y="128" name="inst_C809D3C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="supermushroom" x="1648" y="128" name="inst_50C3009E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1968" y="128" name="inst_9DDBCE2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="1984" y="128" name="inst_F4007F1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="2624" y="192" name="inst_7CA54C40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="superballflower" x="240" y="192" name="inst_04215699" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="brickblock" x="1408" y="192" name="inst_E10B0BDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="coin" x="1408" y="192" name="inst_73D93DF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="farback" x="80" y="80" w="48" h="32" xo="0" yo="0" id="10002891" name="inst_DB6909AA" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -211,13 +211,6 @@ roommanager.roomsd[0,1] = 0</code>
     <instance objName="brickblock" x="400" y="112" name="inst_A1194728" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="80" y="208" name="inst_760D738B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="96" y="208" name="inst_2B8B91F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="352" y="112" name="inst_DCA76E39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="384" y="48" name="inst_9EEC8013" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="64" y="208" name="inst_ABD96015" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="superhuh" x="448" y="240" name="inst_EC403FFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="272" y="160" name="inst_F905544B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="firehuh" x="384" y="112" name="inst_706F18CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="superbrick" x="256" y="96" name="inst_02E15D87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="144" y="240" name="inst_10C526BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipev" x="144" y="224" name="inst_418CEB37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="through" x="448" y="80" name="inst_374CC94B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -237,6 +230,16 @@ roommanager.roomsd[0,1] = 0</code>
     <instance objName="pipev" x="320" y="288" name="inst_CAB97D24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="160" y="288" name="inst_B01B6CF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="208" y="288" name="inst_92DB1D89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="272" y="160" name="inst_07A168B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="352" y="112" name="inst_E821D31B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="384" y="48" name="inst_5E4A3F72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="384" y="112" name="inst_B7099A97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="64" y="208" name="inst_422DC851" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="fireflower" x="384" y="112" name="inst_796E29EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="448" y="240" name="inst_533F8373" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="superballflower" x="448" y="240" name="inst_F0FCFCE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="brickblock" x="256" y="96" name="inst_7DB343E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="supermushroom" x="256" y="96" name="inst_1C992430" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="farback" x="16" y="32" w="48" h="32" xo="0" yo="0" id="10003018" name="inst_711724B1" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

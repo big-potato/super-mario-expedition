@@ -27,9 +27,20 @@
             <kind>1</kind>
             <string>event_inherited()
 change = endblock
+contents = coin
 sprite_index = spr_huh
+sound = sfx_coin
 image_speed = 0
-
+hits = 1
+if place_meeting(x,y,item)
+    {
+    sound = sfx_itembox
+    with instance_place(x,y,item)
+        {
+        other.contents = object_index
+        instance_destroy()
+        }
+    }
 </string>
           </argument>
         </arguments>

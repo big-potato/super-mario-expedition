@@ -275,9 +275,6 @@ roommanager.roomsu[0,1] = 0</code>
     <instance objName="brickblock" x="496" y="80" name="inst_340D5CB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="480" y="80" name="inst_1DDC0740" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="brickblock" x="448" y="80" name="inst_2E590B21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="320" y="192" name="inst_65B26AA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinhuh" x="144" y="192" name="inst_8ED215F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="coinbrick" x="464" y="80" name="inst_DCB143E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipeh" x="416" y="144" name="inst_359B23E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipeh" x="432" y="144" name="inst_D4A6A30E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fakepipeh" x="448" y="144" name="inst_DA9BA148" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -308,6 +305,10 @@ roommanager.roomsu[0,1] = 0</code>
     <instance objName="pipev" x="192" y="240" name="inst_FA8D2D40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipec" x="160" y="256" name="inst_1BB12457" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipec" x="192" y="256" name="inst_E197FBF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="144" y="192" name="inst_1B068B33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="huhblock" x="320" y="192" name="inst_A45FAEEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="brickblock" x="464" y="80" name="inst_8575EB2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="coin" x="464" y="80" name="inst_BCC5C54C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgblocks" x="32" y="112" w="16" h="16" xo="80" yo="0" id="10003261" name="inst_512DB514" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -147,6 +147,7 @@ if global.menu == 0
     bouncing()
     stomp()
     }
+else alarm[0] ++
 distancedestroy()
 </string>
           </argument>

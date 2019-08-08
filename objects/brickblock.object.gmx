@@ -33,6 +33,27 @@ sprite_index = spr_brick
 image_speed = 0
 if !place_meeting(x,y-16,block) and y != 0 image_index ++
 
+if place_meeting(x,y,item)
+    {
+    sound = sfx_itembox
+    change = endblock
+    with instance_place(x,y,item)
+        {
+        other.contents = object_index
+        instance_destroy()
+        }
+    }
+if place_meeting(x,y,coin)
+    {
+    sound = sfx_coin
+    change = endblock
+    with instance_place(x,y,coin)
+        {
+        other.contents = object_index
+        instance_destroy()
+        }
+    
+    }
 </string>
           </argument>
         </arguments>
