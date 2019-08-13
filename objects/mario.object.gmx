@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>randomize()
+steps = 0
+roomnum = -1
 music2 = -1
 newroom = 0
 image_speed = 0
@@ -38,6 +40,31 @@ global.menu = 0
 menuselect = 0
 itemselect = 0
 pipedir = "none"
+
+minimapt = 0
+minimapl = 0
+minimapb = 63
+minimapr = 255
+minimapw = minimapr-minimapl+1
+minimaph = minimapb-minimapt+1
+mapx = 0
+mapy = 0
+roomx = 0
+roomy = 0
+if variable_instance_exists(id,"surf_map") if surface_exists(surf_map) surface_free(surf_map)
+surf_map = surface_create(16,16)
+mapxoff = 0
+mapyoff = 0
+reconstruct = false
+
+
+for(i=0;i&lt;minimapw;i++)
+    {
+    for(j=0;j&lt;minimaph;j++)
+        {
+        //actualmap[i,j] = $000000
+        }
+    }
 
 b_left = vk_left
 b_right = vk_right
@@ -174,7 +201,8 @@ if !variable_global_exists("coins") global.coins = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.menu == 0
+            <string>if newroom != 1 newroom = 0
+if global.menu == 0
     {
     if bbox_top &gt;= room_height
         {
@@ -256,6 +284,7 @@ if !variable_global_exists("coins") global.coins = 0
                     {
                     gotoroom = roommanager.roomsr[i,0]
                     gotoroomy = roommanager.roomsr[i,1]
+                    gotoroomx = room_width
                     }
                 }
             newroom = "right"
@@ -267,6 +296,8 @@ if !variable_global_exists("coins") global.coins = 0
             room_goto(gotoroom)
             }
         }
+    oldroomh = room_height
+    oldroomw = room_width
     }
 </string>
           </argument>
@@ -290,28 +321,36 @@ if !variable_global_exists("coins") global.coins = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if newroom != 0
+            <string>if newroom != 0 and newroom != 1
     {
     with enemy facing = sign(mario.x+0.0001-x)
     if newroom == "up"
         {
         y = room_height-16
         x -= gotoroomx
+        roomx += gotoroomx
+        roomy -= room_height
         }
     if newroom == "down"
         {
         y = 0
         x -= gotoroomx
+        roomx += gotoroomx
+        roomy += oldroomh
         }
     if newroom == "left"
         {
         x = room_width-16
         y -= gotoroomy
+        roomy += gotoroomy
+        roomx -= room_width
         }
     if newroom == "right"
         {
         x = 0
         y -= gotoroomy
+        roomy += gotoroomy
+        roomx += oldroomw
         }
     if audio_get_name(roommanager.music) != audio_get_name(music)
         {
@@ -320,7 +359,6 @@ if !variable_global_exists("coins") global.coins = 0
         //audio_stop_sound(music2)
         }
     with camera event_perform(ev_create,0)
-    newroom = 0
     }
 </string>
           </argument>
@@ -344,7 +382,8 @@ if !variable_global_exists("coins") global.coins = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>animpause()
+            <string>steps ++
+animpause()
 if keyboard_check_pressed(vk_escape) game_restart()
 
 if !variable_instance_exists(id,"music") music = audio_play_sound(roommanager.music,0,true)
@@ -599,7 +638,103 @@ if ds_list_size(inventory) &gt; menuselect
     }
 else itemselect = noone
 
+targviewx = round(map[roommanager.roomnum,1]-(minimapw-map[roommanager.roomnum,3])/2)
+targviewy = round(map[roommanager.roomnum,2]-(minimaph-map[roommanager.roomnum,4])/2)
+if steps == 1
+    {
+    viewx = targviewx
+    viewy = targviewy    
+    }
+viewx += (targviewx-viewx)/8
+viewy += (targviewy-viewy)/8
+//minimap handling
+if newroom != 0
+    {
+    //updatemap()
+    newroom = 1
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Create minimap section
+roomnum ++
+roommanager.roomnum = roomnum
+if roommanager.zone == "ow"
+    {
+    cold = $0a2f8e
+    colb = $2170d7
+    colp = $1fce37
+    colbg = $ff9592
+    }
+if roommanager.zone == "ug"
+    {
+    cold = $6c1712
+    colb = $886116
+    colp = $669116
+    colbg = $000000
+    }
+for(i=0;i*16&lt;room_width;i++)
+    {
+    for(j=0;j*16&lt;room_height;j++)
+        {
+        mapcols[i,j] = colbg
+        if position_meeting(i*16+8,j*16+8,block)
+            {
+            mapcols[i,j] = colp
+            if !position_meeting(i*16+8,j*16+8,pipe) and !position_meeting(i*16+8,j*16+8,fakepipe) mapcols[i,j] = cold
+            }
+        if position_meeting(i*16+8,j*16+8,bumpblock) mapcols[i,j] = colb
+        }
+    }
+map[roomnum,0] = mapcols
+if newroom == 0
+    {
+    map[roomnum,1] = 0
+    map[roomnum,2] = 0
+    }
+if newroom == "up"
+    {
+    map[roomnum,1] = (roomx+gotoroomx)/16
+    map[roomnum,2] = (roomy-room_height)/16
+    }
+if newroom == "down"
+    {
+    map[roomnum,1] = (roomx+gotoroomx)/16
+    map[roomnum,2] = (roomy+oldroomh)/16
+    }
+if newroom == "left"
+    {
+    map[roomnum,1] = (roomx-room_width)/16
+    map[roomnum,2] = (roomy+gotoroomy)/16
+    }
+if newroom == "right"
+    {
+    map[roomnum,1] = (roomx+oldroomw)/16
+    map[roomnum,2] = (roomy+gotoroomy)/16
+    }
+map[roomnum,3] = room_width/16
+map[roomnum,4] = room_height/16
 
+addtomap = 1
 </string>
           </argument>
         </arguments>
@@ -622,7 +757,73 @@ else itemselect = noone
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(global.font)
+            <string>if steps == 1
+    {
+    surface_set_target(surf_map)
+    draw_clear(c_black)
+    surface_reset_target()
+    }
+
+if addtomap or !surface_exists(surf_map)
+    {
+    num = roomnum
+    if !surface_exists(surf_map)
+        {
+        surf_map = surface_create(16,16)
+        surface_set_target(surf_map)
+        draw_clear(c_black)
+        num = 0
+        }
+    while num &lt;= roomnum
+        {
+        surfacewidth = surface_get_width(surf_map)
+        surfaceheight = surface_get_height(surf_map)
+        bonusx = 0
+        bonusy = 0
+        while map[num,1]+mapxoff &lt; 1
+            {
+            mapxoff += 16
+            surfacewidth += 16
+            bonusx += 16
+            }
+        while map[num,2]+mapyoff &lt; 1
+            {
+            mapyoff += 16
+            surfaceheight += 16
+            bonusy += 16
+            }
+        while map[num,1]+map[num,3]+mapxoff &gt; surfacewidth surfacewidth += 16
+        while map[num,2]+map[num,4]+mapyoff &gt; surfaceheight surfaceheight += 16
+        holding = surface_create(surface_get_width(surf_map),surface_get_height(surf_map))
+        surface_copy(holding,0,0,surf_map)
+        surface_resize(surf_map,surfacewidth,surfaceheight)
+        surface_set_target(surf_map)
+        draw_clear(c_black)
+        draw_surface(holding,bonusx,bonusy)
+        //surface_free(holding)
+        
+        for(i=0;i&lt;map[num,3];i++)
+            {
+            for(j=0;j&lt;map[num,4];j++)
+                {
+                col = map[num,0]
+                col = col[i,j]
+                draw_rectangle_colour(map[num,1]+i+mapxoff,map[num,2]+j+mapyoff,map[num,1]+i+mapxoff,map[num,2]+j+mapyoff,col,col,col,col,false)
+                }
+            }
+        num ++
+        }
+    surface_reset_target()
+    addtomap = 0
+    }
+draw_rectangle_colour(minimapl,minimapt,minimapl+minimapw*2,minimapt+minimaph*2,c_black,c_black,c_black,c_black,false)
+draw_surface_part_ext(surf_map,max(0,viewx+mapxoff),max(0,viewy+mapyoff),min(surface_get_width(surf_map)-max(0,viewx+mapxoff),minimapw+min(0,viewx+mapxoff)),min(surface_get_height(surf_map)-max(0,viewy+mapyoff),minimaph+min(0,viewy+mapyoff)),minimapl-min(0,2*(viewx+mapxoff)),minimapt-min(0,2*(viewy+mapyoff)),2,2,c_white,1)
+draw_rectangle_colour(minimapl+2*(map[roommanager.roomnum,1]-viewx+round(x/16)),minimapt+2*(map[roommanager.roomnum,2]-viewy+round(y/16)),minimapl+2*(map[roommanager.roomnum,1]-viewx+round(x/16))+1,minimapt+2*(map[roommanager.roomnum,2]-viewy+round(y/16))+1,c_white,c_white,c_white,c_white,false)
+
+    
+
+
+draw_set_font(global.font)
 draw_set_colour(c_white)
 //draw_text(32, 32, "FPS = " + string(round(fps_real))) 
 for(i=1;i&lt;=inventorysize;i++)
@@ -644,8 +845,13 @@ draw_sprite_ext(spr_ui_hp,0,(view_wview[0]-32)*2, (32*i-16)*2, 4, 4, 0, c_white,
 draw_text_transformed((view_wview[0]-16)*2,(32*i-16)*2,string(hp),4,4,0)
 draw_sprite_ext(spr_ui_money,0,(view_wview[0]-32)*2, (32*i)*2, 4, 4, 0, c_white,1)
 draw_text_transformed((view_wview[0]-16)*2,(32*i)*2,string(global.coins),4,4,0)
-    
+
 if global.menu and hp &gt; 0 draw_text((view_wview[0]-256)*2,(view_hview[0]-16)*2,"Z = use  X = drop  C = equip")
+
+//-----------------------------------------------------------------------------------------------------------------
+//draw_rectangle_colour(minimapl*2,minimapt*2,minimapr*2,minimapb*2,c_black,c_black,c_black,c_black,false)
+
+
 </string>
           </argument>
         </arguments>

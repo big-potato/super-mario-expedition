@@ -133,6 +133,7 @@
     <script>scripts\walk.gml</script>
     <script>scripts\bash.gml</script>
     <script>scripts\undersiding.gml</script>
+    <script>scripts\updatemap.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\mario</object>
@@ -160,6 +161,7 @@
         <object>objects\fakepipev</object>
         <object>objects\fakepipec</object>
         <object>objects\pipe</object>
+        <object>objects\fakepipe</object>
       </objects>
       <object>objects\cloudplat</object>
       <object>objects\mushroom</object>
@@ -216,6 +218,8 @@
     <room>rooms\room5</room>
     <room>rooms\room6</room>
     <room>rooms\room7</room>
+    <room>rooms\room8</room>
+    <room>rooms\room9</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

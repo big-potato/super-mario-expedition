@@ -16,7 +16,10 @@ roommanager.music = undergroundtheme
 roommanager.menumusic = undergroundthememenu
 
 roommanager.roomsu[0,0] = room1
-roommanager.roomsu[0,1] = -800</code>
+roommanager.roomsu[0,1] = -800
+
+roommanager.roomsl[0,0] = room8
+roommanager.roomsl[0,1] = 0</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -68,14 +71,12 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="pipev" x="1712" y="96" name="inst_FDAD3116" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="80" name="inst_982BA6C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="64" name="inst_6027F834" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="camera" x="32" y="48" name="inst_FAE1797C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="camera" x="80" y="96" name="inst_FAE1797C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="48" name="inst_287E645C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="32" name="inst_D714458E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="16" name="inst_A79B729E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="0" name="inst_4A767BE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="16" y="0" name="inst_4F368306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pipev" x="16" y="16" name="inst_0DDC12C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pipev" x="16" y="32" name="inst_7954A462" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="-16" name="inst_C16CE5E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="1712" y="-32" name="inst_2C5339E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="784" y="192" name="inst_0B35D1A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -115,7 +116,7 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="buzzy" x="1488" y="256" name="inst_FD83C8C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="16" y="-16" name="inst_43D854F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pipev" x="16" y="-32" name="inst_0DE6875D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="roommanager" x="16" y="48" name="inst_59BC9083" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="roommanager" x="64" y="96" name="inst_59BC9083" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="1008" y="208" name="inst_772B8650" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="1008" y="224" name="inst_CA4BBA6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="1008" y="240" name="inst_A2A99512" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -134,8 +135,6 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="stairblock" x="976" y="208" name="inst_7C39E08C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="0" y="0" name="inst_12E40AC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="48" y="0" name="inst_3858C88D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="32" y="0" name="inst_B27C3FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="16" y="0" name="inst_84448005" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="64" y="0" name="inst_3699C74B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="80" y="0" name="inst_F6FBA1FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="96" y="0" name="inst_11953B04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -463,11 +462,6 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="dirt" x="144" y="256" name="inst_9E37F2DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="16" y="208" name="inst_991A5939" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="32" y="208" name="inst_42307121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="48" y="192" name="inst_3DFD0A0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="64" y="192" name="inst_6A074DC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="80" y="192" name="inst_476E5EBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="80" y="208" name="inst_8580FCA8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="96" y="208" name="inst_A588090D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="96" y="224" name="inst_92131CA8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="112" y="224" name="inst_DD7E34F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="128" y="224" name="inst_8A0EF268" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -490,16 +484,8 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="dirt" x="176" y="256" name="inst_2EE86A4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="160" y="256" name="inst_F05A5334" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="144" y="240" name="inst_5C879791" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="48" y="16" name="inst_07590B5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="32" y="16" name="inst_4AC591DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="16" y="16" name="inst_3F57A560" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="64" y="16" name="inst_0C7618AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="80" y="32" name="inst_7B326C32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="96" y="32" name="inst_B1755AC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="112" y="32" name="inst_027A5BE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="128" y="32" name="inst_965B4B1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="144" y="32" name="inst_E58D52CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="80" y="16" name="inst_39F06D00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="96" y="16" name="inst_5B615F75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="112" y="16" name="inst_F1423C0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="128" y="16" name="inst_8710C339" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -694,10 +680,8 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="dirt" x="1712" y="16" name="inst_98ED0F0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="1728" y="16" name="inst_B8DC7A6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="1664" y="32" name="inst_24355B0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="32" y="176" name="inst_13A67472" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="32" y="192" name="inst_ABA43506" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dirt" x="16" y="192" name="inst_B3DB2697" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dirt" x="16" y="176" name="inst_453BA15A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="192" y="-16" name="inst_92637DEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="240" y="-16" name="inst_AE15FF09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stairblock" x="464" y="-16" name="inst_D7F6DE58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -706,6 +690,15 @@ roommanager.roomsu[0,1] = -800</code>
     <instance objName="stairblock" x="1536" y="-16" name="inst_05818BB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="huhblock" x="400" y="160" name="inst_F9AB9AF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fireflower" x="400" y="160" name="inst_04E67FF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipev" x="16" y="16" name="inst_6CC59A05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipec" x="16" y="32" name="inst_5FE0CF2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="48" y="32" name="inst_095671AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="16" y="80" name="inst_98761E46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="-16" y="80" name="inst_F5FA8082" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="0" y="80" name="inst_22037B25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="-32" y="80" name="inst_C364A336" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="-48" y="80" name="inst_7CCF89D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pipeh" x="32" y="80" name="inst_2D0E8998" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgblocks" x="384" y="240" w="16" h="16" xo="80" yo="0" id="10003033" name="inst_94183448" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
